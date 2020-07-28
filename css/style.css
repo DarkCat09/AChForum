@@ -1,0 +1,619 @@
+.text-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.menu {
+	background-color: rgba(46, 135, 171, 0.7);
+	border-radius: 5px;
+	position: fixed;
+	width: 99%;
+	z-index: 9996;
+}
+.menu ul, .menu ul li h4 {
+	display: inline;
+}
+.menu .top-menu {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	overflow: hidden;
+	float: left;
+}
+.menu .top-menu li {
+	float: left;
+	padding-right: 3px;
+	border-right: 1px solid black;
+}
+
+.menu .menu-buttons {
+	list-style: none;
+	margin: 0;
+	padding-right: 0;
+	overflow: hidden;
+	float: right;
+}
+.menu .menu-buttons li {
+	float: left;
+	padding-left: 3px;
+	border-left: 1px solid black;
+}
+
+.menu li, .menu a {
+	text-decoration: none;
+	color: white;
+	margin: 3px;
+	font-size: 18px;
+	font-family: "Calibri";
+	cursor: pointer;
+}
+.menu li:hover, .menu a:hover {
+	color: blue;
+}
+
+.main-content {
+	padding-top: 50px;
+}
+
+#posts-container {
+	list-style: none;
+}
+#posts-container li {
+	display: block;
+	border: 2px solid black;
+	padding: 10px;
+}
+
+.hint {
+	background-color: rgba(173, 171, 50, 0.6);
+	border: 2px solid rgb(173, 171, 50);
+	border-radius: 5px;
+	font-family: "Arial";
+}
+
+.hint-heading {
+	font-weight: bold;
+	font-family: "Calibri";
+	font-size: 16px;
+}
+.hint-body {
+	font-weight: normal;
+	font-size: 14px;
+	margin-top: 5px;
+}
+.close {
+	float: right;
+	cursor: pointer;
+}
+
+.loginform input, .loginform button {
+	border-radius: 10px;
+	border: 2px solid black;
+}
+.loginform input[type=submit] {
+	cursor: pointer;
+}
+.loginform input:not([type=submit]):valid {
+	border: 2px solid green;
+}
+.loginform input:not([type=submit]):invalid {
+	border: 2px solid red;
+}
+
+
+/*
+Following styles for dialogs from site:
+https://moonback.ru/page/modal-window-html-css-only
+(but they are slightly modified)
+Thank you!
+*/
+
+.stylized-dialog-bg {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 9998;
+	display: none;
+	pointer-events: none;
+	text-align: center;
+}
+.stylized-dialog-bg:target {
+	display: initial;
+	pointer-events: auto;
+}
+.stylized-dialog {
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 15% auto;
+	max-width: 35%;
+	padding: 10px;
+	z-index: 9999;
+	text-align: center;
+}
+
+
+/*
+Following styles for buttons from site:
+http://shpargalkablog.ru/2012/04/css-knopki.html
+(but styles for the 1st and 11th button are slightly modified)
+Thank you!
+*/
+
+/*Normal White Panel Button*/
+.stylized-button-1 {
+	position: relative;
+	display: inline-block;
+	line-height: 2em;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	outline: none;
+	border-radius: 5px;
+	box-shadow: 0 0 0 1px #ddd inset, 0 1px 1px #fff;
+}
+.stylized-button-1:hover {
+	background: #dcdcdc linear-gradient(#fff, #dcdcdc);
+	box-shadow: 0 0 0 1px #aaa inset, 0 1px 1px #aaa;
+}
+.stylized-button-1:active {
+	background: none;
+	box-shadow: 0 0 0 1px #bbb inset, 0 1px 3px rgba(0,0,0,.5) inset, 0 1px 2px #fff;
+}
+
+/*Soft Green Button*/
+.stylized-button-2 {
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: .8em 1em calc(.8em + 3px);
+	border-radius: 3px;
+	background: rgb(64,199,129);
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	transition: 0.2s;
+}
+.stylized-button-2:hover  { background: rgb(53, 167, 110); }
+.stylized-button-2:active {
+	background: rgb(33,147,90);
+	box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+/*Black Tele2 Button*/
+.stylized-button-3 {
+	display: inline-block;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+	user-select: none;
+	padding: .5em 2em;
+	outline: none;
+	border: 2px solid;
+	border-radius: 1px;
+	transition: 0.2s;
+}
+.stylized-button-3:hover  { background: rgba(255,255,255,.2); }
+.stylized-button-3:active { background: white; }
+
+/*Light-Blue Download MultiLine Button*/
+.stylized-button-4 {
+	display: inline-block;
+	width: 15em;
+	font-size: 80%;
+	color: rgba(255,255,255,.9);
+	text-shadow: #2e7ebd 0 1px 2px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1.1;
+	white-space: pre-line;
+	padding: .7em 0;
+	border: 1px solid;
+	border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+	border-radius: 6px;
+	outline: none;
+	background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
+	box-shadow: inset rgba(255,255,255,.5) 1px 1px;
+}
+.stylized-button-4:first-line{
+	font-size: 170%;
+	font-weight: 700;
+}
+.stylized-button-4:hover {
+	color: rgb(255,255,255);
+	background-image: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
+}
+.stylized-button-4:active {
+	color: rgb(255,255,255);
+	border-color: #2970a9;
+	background-image: linear-gradient(#5796c8, #6aa2ce);
+	box-shadow: none;
+}
+
+/*MyFavourite Orange Download Button*/
+.stylized-button-5 {
+	display: inline-block;
+	text-shadow: 1px 1px #fff;
+	text-decoration: none;
+	padding: .3em 1em;
+	border: 1px solid #aaa;
+	border-radius: 100px;
+	outline: none;
+	background: #d6dbbf no-repeat;
+	background-image:
+		linear-gradient(to left, #aaa, #aaa),
+		linear-gradient(to left, #feffe8, #feffe8),
+		linear-gradient(#feffe8, #d6dbbf);
+	background-position: calc(100% - 2.7em) 0, calc(100% - 2.7em + 1px) 0, 0 0;
+	background-size: 1px 100%, 1px 100%, auto auto;
+	overflow: hidden;
+}
+.stylized-button-5:after {
+  content: "\bb";
+  position: relative;
+  bottom: 0;
+  display: inline-block;
+  margin-left: 1.4em;
+  vertical-align: middle;
+  font-family: "Times","Times New Roman","serif","sans-serif","EmojiSymbols";
+  font-weight: 700;
+  font-size: 140%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.stylized-button-5:hover {
+	background-color: #fdfd9f;
+	background-image:
+		linear-gradient(to left, #aaa, #aaa),
+		linear-gradient(to left, #feffe8, #feffe8),
+		linear-gradient(#fffce7, #fdfd9f);
+}
+.stylized-button-5:active:after {
+	bottom: -1.2em;
+	transition: .3s;
+}
+
+/*Blue Loading Button*/
+.stylized-button-6 {
+	position: relative;
+	display: inline-block;
+	font-size: 100%;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: #053852 -1px 1px, #053852 1px 1px, #053852 1px -1px, #053852 -1px -1px;
+	text-decoration: none;
+	user-select: none;
+	padding: .3em .7em;
+	outline: none;
+	border-radius: 7px;
+	background: #053852 repeating-linear-gradient(135deg, #053852, #053852 10px, #1679ad 10px, #1679ad 20px, #053852 20px);
+	box-shadow:
+		inset -2px -2px rgba(0,0,0,.3),
+		inset 2px 2px rgba(255,255,255,.3);
+	transition: background-position 999999s, color 999999s, text-shadow 999999s;
+}
+.stylized-button-6:hover, .stylized-button-6:focus {
+	text-shadow: #0175b1 -1px 1px, #0175b1 1px 1px, #0175b1 1px -1px, #0175b1 -1px -1px;
+	background: #0175b1 repeating-linear-gradient(135deg, #0175b1, #0175b1 10px, #8fd2f5 10px, #8fd2f5 20px, #0175b1 20px) no-repeat;
+	background-size: 1000% 100%;
+}
+.stylized-button-6:hover { background-position: 0 0; }
+.stylized-button-6:focus {
+	color: rgba(255,255,255,0);
+	text-shadow: rgba(1,117,177,0) -1px 1px, rgba(1,117,177,0) 1px 1px, rgba(1,117,177,0) 1px -1px, rgba(1,117,177,0) -1px -1px;
+	background-position: 900% 0;
+	transition: background-position linear 600s, color .5s, text-shadow .5s;
+}
+.stylized-button-6:after {
+	content: "загрузка\2026";
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .3em .7em;
+	color: rgba(0,0,0,0);
+	text-shadow: none;
+	transition: 999999s;
+}
+.stylized-button-6:focus:after {
+	color: #fff;
+	text-shadow: #0175b1 -1px 1px, #0175b1 1px 1px, #0175b1 1px -1px, #0175b1 -1px -1px;
+	transition: .5s;
+}
+
+/*Orange Circle Loading Button*/
+.stylized-button-7 {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	width: 3em;
+	height: 3em;
+	border-radius: 100%;
+	outline: none;
+	background: #ddd;
+	box-shadow: 0 1px rgba(0,0,0,.1) inset, 0 1px #fff;
+}
+.stylized-button-7:after, .stylized-button-7:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 7.5%;
+	left: -15%;
+	right: 0;
+	bottom: 0;
+	width: 30%;
+	height: 10%;
+	margin: auto;
+	background: #999;
+	box-shadow: 0 1px rgba(0,0,0,.1) inset, 0 1px #fff;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.stylized-button-7:before {
+	left: 15%;
+	-webkit-transform: rotate(315deg);
+	transform: rotate(315deg);
+}
+.stylized-button-7:hover, .stylized-button-7:focus {
+	background: #e35d31;
+	box-shadow: none;
+}
+.stylized-button-7:hover:after, .stylized-button-7:hover:before {
+	background: #fff;
+	box-shadow: none;
+}
+.stylized-button-7:focus {
+	background-image:
+		linear-gradient(120deg, transparent 45%, #e35d31 45%, #e35d31 55%, transparent 55%),
+		radial-gradient(transparent 20%, #fff 20%, #fff 30%, transparent 30%);
+	-webkit-animation: rotate31 1s linear infinite forwards;
+	animation: rotate31 1s linear infinite forwards;
+}
+.stylized-button-7:focus:after, .stylized-button-7:focus:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: calc(-30% - 4px/2);
+	left: 4px;
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-left: 8px solid #fff;
+	border-bottom: 4px solid transparent;
+	background: transparent;
+	box-shadow: none;
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.stylized-button-7:focus:before {
+	top: calc(30% + 4px/2);
+	left: -4px;
+	border-left: none;
+	border-right: 8px solid #fff;
+}
+@-webkit-keyframes rotate31 {
+	100% {-webkit-transform: rotate(360deg);}
+}
+@keyframes rotate31 {
+	100% {transform: rotate(360deg);}
+}
+
+/*Blue Circle Loading Button*/
+.stylized-button-8 {
+	position: relative;
+	display: inline-block;
+	border-radius: 100px;
+	outline: none;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset, 0 1px 1px rgba(255,255,255,.2);
+	background: #8a7b78 linear-gradient(#8a7b78, #cdcdcd);
+}
+.stylized-button-8 span {
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 100px;
+	border: solid transparent;
+	border-width: 0 0 0 50px;
+	border-radius: 100px;
+	outline: none;
+	overflow: hidden;
+}
+.stylized-button-8 span:before {
+	content: "";
+	position: absolute;
+	left: -50px;
+	height: 100px;
+	border-right: 50px solid transparent;
+	border-left: 50px solid #bfddf5;
+	border-radius: 100px;
+}
+.button26:after {
+	content: "\260e";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 300%;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: #2e7ebd 0 1px 2px;
+	color: #fff;
+	margin: auto;
+	border-radius: 100px;
+	background: #75a7cd linear-gradient(#75a7cd, #5084a8);
+	box-shadow: 0 2px 2px rgba(255,255,255,.5) inset, 0 -2px 2px rgba(0,0,0,.3) inset, 0 0 2px 2px rgba(0,0,0,.3);
+}
+.stylized-button-8:focus span {
+	-webkit-animation: background1 10s linear forwards;
+	animation: background1 10s linear forwards;
+}
+.stylized-button-8:focus span:before {
+	-webkit-animation: rotate1 10s linear forwards;
+	animation: rotate1 10s linear forwards;
+}
+.stylized-button-8:focus:after {
+	background: #5390b8 linear-gradient(#5390b8, #6ba9d4);
+}
+@-webkit-keyframes background1 {
+	49.999% {border-width: 0 0 0 50px; border-color: transparent;}
+	50%, 100% {border-width: 0 50px 0 0; border-color: #bfddf5;}
+}
+@-webkit-keyframes rotate1 {
+	49.999% {left: -50px;}
+	50% {left: 0px;}
+	100% {-webkit-transform: rotate(360deg); left: 0px;}
+}
+@keyframes background1 {
+	49.999% {border-width: 0 0 0 50px; border-color: transparent;}
+	50%, 100% {border-width: 0 50px 0 0; border-color: #bfddf5;}
+}
+@keyframes rotate1 {
+	49.999% {left: -50px;}
+	50% {left: 0px;}
+	100% {transform: rotate(360deg); left: 0px;}
+}
+
+/*Beautiful Button of Glass*/
+.stylized-button-9 {
+	position: relative;
+	display: inline-block;
+	color: #777674;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+	user-select: none;
+	padding: 1em 2em;
+	outline: none;
+	border-radius: 3px / 100%;
+	background-image:
+		linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+		linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+		linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+		linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+		linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+		linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+	background-repeat: no-repeat;
+	background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+	background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+	box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+}
+.stylized-button-9:hover {
+	transition: .5s linear;
+	background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+.stylized-button-9:active {
+	top: 1px;
+}
+
+/*Yellow Volume Button*/
+.stylized-button-10 {
+	position: relative;
+	display: inline-block;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	text-shadow: -2px 2px rgba(255,255,255,.3);
+	line-height: 1.1;
+	padding: .5em 3em .5em .6em;
+	background: linear-gradient(#ecc92b, #fce25b);
+	box-shadow:
+		0 0 0 1px #fce25b inset,
+		-1px 0px rgb(220,195,35), -1px 1px rgb(192,167,7),
+		-2px 1px rgb(219,194,34), -2px 2px rgb(191,166,6),
+		-3px 2px rgb(218,193,33), -3px 3px rgb(190,165,5),
+		-4px 3px rgb(217,192,32), -4px 4px rgb(189,164,4),
+		-5px 4px rgb(216,191,31), -5px 5px rgb(188,163,3),
+		-6px 5px rgb(215,190,30), -6px 6px rgb(187,162,2),
+		-7px 6px rgb(214,189,29), -7px 7px rgb(186,161,1),
+		-8px 7px rgb(213,188,28), -8px 8px rgb(185,160,0),
+		-7px 9px 1px rgba(0,0,0,.4),
+		-5px 11px 1px rgba(0,0,0,.2),
+		-1px 13px 4px rgba(0,0,0,.2),
+		4px 16px 7px rgba(0,0,0,.3);
+	transition: .4s;
+}
+.stylized-button-10:active {
+	box-shadow: none;
+	-webkit-transform: translate(-7px, 8px);
+	transform: translate(-7px, 8px);
+}
+.stylized-button-10:after {
+	content: "";
+	position: absolute;
+	top: calc(50% - .6em/2);
+	right: .6em;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	border: .37em solid;
+	border-top: none;
+	border-left: none;
+	width: .6em;
+	height: .6em;
+	box-shadow: inset -2px 2px rgba(255,255,255,.3);
+}
+
+.stylized-button-11, .stylized-button-11:before {
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 100px;
+  border: solid rgb(4,88,192);
+  border-width: 3px 10px;
+  outline: none;
+  opacity: 1;
+  transition: .6s, opacity 0s 9999999s, visibility 0s 9999999s;
+} 
+.stylized-button-11 {
+	position: relative;
+	padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
+	border: 1px solid rgba(62,153,239,.5);
+	background:
+		linear-gradient(to left, rgb(62,153,239) 1%,
+		#fff 3%,
+		rgb(44,135,232) 8%,
+		rgba(255,255,255,.3) 50%,
+		rgb(44,135,232) 92%,
+		#fff 97%,
+		rgb(62,153,239) 99%) no-repeat;
+}
+.stylized-button-11:before {
+	/*content: "УЗНАТЬ ПОДРОБНОСТИ";*/
+	position: absolute; 
+	bottom: -7px;
+	left: -1px;
+	width: calc(100% - (15px + 10px - 1px)*2);
+	background: #fff linear-gradient(rgb(58,160,253), rgb(4,88,192) 60%, rgb(49,112,201));
+	box-shadow: 0 10px 18px rgba(0,0,0,.5);
+	}
+.stylized-button-11:hover {
+	-webkit-transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
+}
+.stylized-button-11:hover:before {
+	border-color: #0766d8;
+	background: #fff linear-gradient(#3fadff, #0766d8 60%, #3279dd);
+}
+.stylized-button-11:focus,
+.stylized-button-11:active {
+	-webkit-transform: scale(2, 2);
+	transform: scale(2, 2);
+	opacity: 0;
+	visibility: hidden;
+	transition: .4s;
+}
+
+
+.support-button {
+	color: #008b8b;
+	font-family: "Tahoma";
+}

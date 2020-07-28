@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8" />
+	<title>Проверка поддержки Cookie</title>
+</head>
+<body>
+	<h1>Проверка поддержки Cookie в Вашем браузере</h1>
+	<button onclick = "checkCookie()">Проверить</button>
+	<script>
+		function checkCookie() {
+			document.cookie = "testcookie=1";
+			var updatedCookies = document.cookie;
+			if ((updatedCookies.split("; ").indexOf("testcookie=1")) != -1) {
+				alert("Cookie поддерживаются! Ура!");
+			}
+			else {
+				alert("Куки не поддерживаются! Выйдите из режима инкогнито или используйте другой браузер.");
+			}
+			document.cookie = "testcookie=1; max-age=0";
+		};
+	</script>
+</body>
+</html>
